@@ -61,6 +61,7 @@ with st.sidebar:
     use_remoteok = st.checkbox("Remote OK", value=True)
     use_arbeitnow = st.checkbox("Arbeitnow", value=True)
     use_adzuna = st.checkbox("Adzuna (needs API key)", value=False)
+    use_companies = st.checkbox("Company pages (Greenhouse + Lever)", value=True)
 
     enabled_sources = []
     if use_remotive:
@@ -71,6 +72,8 @@ with st.sidebar:
         enabled_sources.append("arbeitnow")
     if use_adzuna:
         enabled_sources.append("adzuna")
+    if use_companies:
+        enabled_sources.append("companies")
 
     st.divider()
     st.subheader("Notifications")
@@ -202,6 +205,6 @@ else:
 
 st.divider()
 st.caption(
-    "Sources: Remotive • Remote OK • Arbeitnow • Adzuna (optional)  |  "
+    "Sources: Remotive • Remote OK • Arbeitnow • Companies (Greenhouse/Lever) • Adzuna (optional)  |  "
     "Data is for personal monitoring only. Always apply on the original job page."
 )
