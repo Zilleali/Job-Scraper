@@ -1,0 +1,35 @@
+# Default search settings - edit these or override from the dashboard
+defaults:
+  keywords:
+    - "Network Engineer"
+    - "Junior Network Engineer"
+    - "NOC Technician"
+    - "IT Technician"
+    - "Network Technician"
+  locations: []          # empty = any
+  countries: []          # empty = any (use ISO codes like us, gb, pk, de when using Adzuna)
+  remote_only: false
+  results_per_source: 30
+
+sources:
+  remotive:
+    enabled: true
+  remoteok:
+    enabled: true
+  arbeitnow:
+    enabled: true
+  adzuna:
+    enabled: false       # requires ADZUNA_APP_ID + ADZUNA_APP_KEY in .env
+  companies:
+    enabled: false       # basic Greenhouse/Lever support (expand later)
+
+notifications:
+  discord:
+    enabled: false
+  slack:
+    enabled: false
+
+schedule:
+  # Used by APScheduler inside the dashboard (you can also use system cron)
+  enabled: false
+  interval_hours: 6
