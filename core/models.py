@@ -31,4 +31,4 @@ class SearchFilters(BaseModel):
     countries: List[str] = Field(default_factory=list)
     remote_only: bool = False
     results_per_source: int = 30
-    sources: List[str] = Field(default_factory=lambda: ["remotive", "remoteok", "arbeitnow"])
+    sources: List[str] = Field(default_factory=lambda: ["remotive", "remoteok", "arbeitnow", "companies"])

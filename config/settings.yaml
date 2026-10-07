@@ -21,7 +21,7 @@ sources:
   adzuna:
     enabled: false       # requires ADZUNA_APP_ID + ADZUNA_APP_KEY in .env
   companies:
-    enabled: false       # basic Greenhouse/Lever support (expand later)
+    enabled: true        # Greenhouse + Lever boards
 
 notifications:
   discord:
